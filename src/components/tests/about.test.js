@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Navbar from '../Navbar';
+import About from '../About';
 
 test('Should render About', () => {
-  const wrapper = shallow(<Navbar />);
+  const wrapper = shallow(<About />);
   expect(wrapper).toMatchSnapshot();
 });

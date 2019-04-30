@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import About from './components/About';
 import DayQuote from './components/Home';
 import Navbar from './components/Navbar';
+import PostQuotes from './components/Postquotes';
 import store from './store';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
             </header>
             <hr />
           <Route exact path="/" component={DayQuote} />
+          <Route path="/new_quote" component={PostQuotes} />
           <Route path="/about" component={About} />
           </div>
         </BrowserRouter>
