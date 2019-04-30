@@ -31,8 +31,6 @@ describe('components', () => {
       })
 
       expect(enzymeWrapper.find('h3').hasClass('center')).toBe(true);
-
-      expect(enzymeWrapper).toMatchSnapshot();
     });
   });
 });
