@@ -37,5 +37,9 @@ module.exports = {
 		new ExtractTextPlugin('dist/styles/main.css', {
 		    allChunks: true
 		  }),
+		// 'transform-runtime', {
+		// 	'polyfill': false,
+		// 	'regenerator': true
+		// }
 	]
 };

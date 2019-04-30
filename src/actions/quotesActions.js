@@ -1,4 +1,4 @@
-import { DAY_QUOTE, FETCH_QUOTES, NEW_QUOTE } from './types';
+import { DAY_QUOTE, FETCH_QUOTES, NEW_QUOTE, ACTION_FAILED } from './types';
 
 var apiURL1 = "http://127.0.0.1:8000/quotes/my_quotes/"
 var apiURL2 = "http://127.0.0.1:8000/quotes/quote_of_the_day/"
