@@ -7,6 +7,7 @@ import About from './components/About';
 import DayQuote from './components/Home';
 import Navbar from './components/Navbar';
 import PostQuotes from './components/Postquotes';
+import Quotes from './components/Quotes';
 import store from './store';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <hr />
           <Route exact path="/" component={DayQuote} />
           <Route path="/new_quote" component={PostQuotes} />
+          <Route path="/all_quotes" component={Quotes} />
           <Route path="/about" component={About} />
           </div>
         </BrowserRouter>
