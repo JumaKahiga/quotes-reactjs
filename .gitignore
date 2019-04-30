@@ -22,4 +22,4 @@ yarn-debug.log*
 yarn-error.log*
 #idea
 .idea/
-package-lock.json
+package-lock.jsonnode_modules
