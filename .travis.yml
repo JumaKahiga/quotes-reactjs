@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - '11.10.1'
+env:
+  global:
+    - CC_TEST_REPORTER_ID=8f81ed3fed84f711b868c16f70cce7c3786b227e42054a4b263e81bbf48f0a46
+  matrix:
+    - REACT=16.7
+
+install:
+  - npm install
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - curl -L
+    https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - npm run test
+  - npm run test:coverage
+
+after_success:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

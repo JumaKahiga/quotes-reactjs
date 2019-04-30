@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { dayQuote } from '../actions/quotesActions';
 
 
-class DayQuote extends Component {
+export class DayQuote extends Component {
 	componentWillMount() {
 		this.props.dayQuote();
 	}
