@@ -14,7 +14,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "test:overalls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "author": "Juma Kahiga",
   "license": "MIT",
