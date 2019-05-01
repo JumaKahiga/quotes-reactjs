@@ -2,13 +2,19 @@
   "name": "quotes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "npm": "6.4.1",
+    "node": "10.15.3"
+  },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "dev-start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --config webpack.prod.config.js --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --coverage --colors",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "author": "Juma Kahiga",
   "license": "MIT",
@@ -41,6 +47,7 @@
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
+    "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fetch-mock": "^7.3.3",
     "html-webpack-plugin": "^3.2.0",

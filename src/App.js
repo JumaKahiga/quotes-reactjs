@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import About from './components/About';
 import DayQuote from './components/Home';
 import Navbar from './components/Navbar';
-import PostQuotes from './components/Postquotes';
+import PostQuotes from './components/PostQuotes';
 import Quotes from './components/Quotes';
 import store from './store';
 
